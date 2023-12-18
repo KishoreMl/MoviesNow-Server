@@ -13,8 +13,7 @@ movieRouter.route('/movie/:id').get((req, res) => {
                 console.log(err);
             }
             res.json(result)
-        })
-   
+        }) 
 });
 
 movieRouter.route('/movie/:id/:res').get((req, res) => {
@@ -29,9 +28,9 @@ movieRouter.route('/movie/:id/:res').get((req, res) => {
             }
             res.json(result)
         })
-   
-   
 });
+    
+
 movieRouter.route('/movie').get((req, res) => {
     let db_connect = dbo.getDb("MoviesNow");
     db_connect

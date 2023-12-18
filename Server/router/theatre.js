@@ -15,7 +15,7 @@ theatreRouter.route('/theatre').get((req,res)=> {
 
 theatreRouter.route('/theatre/:id').get((req, res) => {
     let db_connect = dbo.getDb("MoviesNow");
-    let query = {theatrename :req.params.id}
+    let query = {theatreId :req.params.id}
     db_connect
         .collection("Theatre")
         .findOne(query, function (err, result) {

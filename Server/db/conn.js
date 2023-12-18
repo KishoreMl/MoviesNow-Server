@@ -11,8 +11,7 @@ var _db;
 
 module.exports = {
     connectToServer: function (callback) {
-        client.connect(function (err, db) {
-            
+        client.connect(function (err, db) {   
             if (db) {
                 _db = db.db("MoviesNow");
                 console.log("sucessfully connected");
@@ -20,7 +19,6 @@ module.exports = {
             return callback(err);
         });
     },
-
     getDb: function() {
         return _db;
     }

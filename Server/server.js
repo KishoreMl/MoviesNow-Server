@@ -18,14 +18,11 @@ app.use(require("./router/seats"));
 
 const dbo = require("./db/conn");
 
-app.listen(port, () => {
-    
+app.listen(port, () => {   
     dbo.connectToServer(function (err) {
         if (err)
             console.log(err);
     });
-
-    console.log("Server is running");
-    
+    console.log("Server is running");  
 })
 
