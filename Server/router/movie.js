@@ -8,11 +8,10 @@ movieRouter.route('/movie/:id').get((req, res) => {
     db_connect
         .collection("Movies")
         .findOne(query, function (err, result) {
-            if (err)
-            {
+            if (err) {
                 console.log(err);
             }
-            res.json(result)
+            res.json(result);
         }) 
 });
 
@@ -22,11 +21,10 @@ movieRouter.route('/movie/:id/:res').get((req, res) => {
     db_connect
         .collection("Movies")
         .findOne(query, function (err, result) {
-            if (err)
-            {
+            if (err) {
                 console.log(err);
             }
-            res.json(result)
+            res.json(result);
         })
 });
     

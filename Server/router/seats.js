@@ -7,7 +7,7 @@ seatRouter.route('/seat/:id').get((req, res) => {
     db_connect
         .collection("Seats")
         .findOne(query, function (err, result) {
-            if (err){
+            if (err) {
                 console.log(err);
             }
             res.json(result);

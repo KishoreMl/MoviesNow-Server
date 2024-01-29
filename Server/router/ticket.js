@@ -46,7 +46,6 @@ ticketRouter.route('/ticket/update/:id').post((req, response)=>{
             booked: req.body.booked
         },
     };
-
     db_connect
         .collection("Ticket")
         .updateOne(query, newvalues, function (err, res) {
@@ -70,8 +69,7 @@ ticketRouter.route('/ticket/:id').get((req, res) => {
 
 ticketRouter.route('/ticket').delete((req, res) => {
     let db_connect = dbo.getDb("MoviesNow");
-    let query = { booked:false};
-
+    let query = { booked: false};
     db_connect
         .collection("Ticket")
         .deleteMany(query, function (err, obj) {
